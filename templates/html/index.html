@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt/Decrypt</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div><img src="/static/images/hacker.png" alt=""></div>
+    <div class="container">
+        <h1>Encrypt or Decrypt Text</h1>
+    
+        <form action="/process" method="post">
+            <label for="operation">Operation:</label>
+            <select name="operation" id="operation" required>
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+            <br>
+            
+            <label for="text">Text:</label>
+            <input type="text" id="text" name="text" required>
+            <br>
+
+            <div id="num_keys">
+                <label for="rail_key">Rail Fence Key:</label>
+                <input type="number" id="rail_key" name="rail_key" required>
+                <br>
+
+                <label for="caesar_shift">Caesar Key:</label>
+                <input type="number" id="caesar_shift" name="caesar_shift" required>
+                <br>
+            </div>
+            
+            <label for="vigenere_key">Vigenère Key:</label>
+            <input type="text" id="vigenere_key" name="vigenere_key" required>
+            <br>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
